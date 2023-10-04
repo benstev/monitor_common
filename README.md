@@ -1,2 +1,2 @@
 # monitor_common
-common code fot monitor
+common code for monitor
