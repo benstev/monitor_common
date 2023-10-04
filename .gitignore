@@ -1,0 +1,13 @@
+.env
+work
+build/*
+ansible
+.vscode
+tools
+.DS_Store
+gen
+tags.json
+render.yaml
+secrets/*
+kubernetes
+TODO.md
