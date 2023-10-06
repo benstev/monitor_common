@@ -27,10 +27,12 @@ func (e *EmitterService) connect() error {
 	if err != nil {
 		return err
 	}
-
-	log.Debug().Str("host", e.host).Str("ID", c.ID()).Msg("emitter connected")
 	e.client = c
 	return nil
+}
+
+func (e *EmitterService) ID() string {
+	return e.client.ID()
 }
 
 func (e *EmitterService) Publish(key string, channel string, payload interface{}) error {
