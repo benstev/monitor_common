@@ -5,6 +5,7 @@ go 1.20
 require github.com/go-chi/chi/v5 v5.0.10
 
 require (
+	github.com/eclipse/paho.mqtt.golang v1.2.0 // indirect
 	github.com/golang/protobuf v1.5.3 // indirect
 	github.com/google/uuid v1.3.0 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
@@ -25,6 +26,7 @@ require (
 
 require (
 	github.com/dapr/go-sdk v1.8.0
+	github.com/emitter-io/go/v2 v2.0.9
 	github.com/go-chi/cors v1.2.1
 	github.com/gobuffalo/envy v1.10.2
 	github.com/rs/zerolog v1.31.0
