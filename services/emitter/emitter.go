@@ -12,10 +12,6 @@ type EmitterService struct {
 	client *emitter.Client
 }
 
-const (
-	AGENT_TOPIC = "monitor/agent/"
-)
-
 func NewEmitterService(emitterHost string) (*EmitterService, error) {
 	e := &EmitterService{host: emitterHost}
 	if err := e.connect(); err != nil {
@@ -37,12 +33,12 @@ func (e *EmitterService) connect() error {
 	return nil
 }
 
-func (e *EmitterService) Publish(key string, payload interface{}) error {
+func (e *EmitterService) Publish(key string, channel string, payload interface{}) error {
 	d, err := json.Marshal(payload)
 	if err != nil {
 		return (err)
 	}
-	if err := e.client.Publish(key, AGENT_TOPIC, d); err != nil {
+	if err := e.client.Publish(key, channel, d); err != nil {
 		return (err)
 	}
 	return nil
